@@ -20,7 +20,7 @@ category="item_name,shipping_info\n"
 outfile.write(category)
 for container in item_containers:
 	title_container=container.findAll("a",{"class":"item-title"})	#finds all the class names(item-title) with given html element(a)
-	item_name=title_container[0].text
+	item_name=title_container[0].text	#stores text of first element in container
 	shipping_container=container.findAll("li",{"class":"price-ship"})
 	shipping_info=shipping_container[0].text.strip() #strip removes all the unnecessary spaces
 	# print(title_container)
