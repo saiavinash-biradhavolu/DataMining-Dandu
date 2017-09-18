@@ -32,5 +32,5 @@ for page in range(1,4):
         if count==100:
             break
         count=count+1
-        outfile.write(item_name+","+shipping_info+"\n")
+        outfile.write(item_name.replace(","," ")+","+shipping_info+"\n")
 outfile.close()
